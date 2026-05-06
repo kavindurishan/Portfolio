@@ -12,7 +12,7 @@ function About() {
             <div className="container about-wrapper">
               {/* IMAGE SIDE */}
               <div className="about-image-box">
-                <img src="/images/picred.png" alt="About Me" />
+                <img src="/images/propic.png" alt="About Me" />
               </div>
 
               {/* TEXT SIDE */}

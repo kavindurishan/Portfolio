@@ -36,14 +36,14 @@ function Hero() {
               <a href="#projects" className="btn btn-primary">
                 <i className="fa-solid fa-rocket"></i>View Projects
               </a>
-              <a href="/images/Kavindu_Rishan_Modarage_CV.pdf" className="btn" target="_blank" rel="noopener noreferrer" download>
-                <i className="fa-solid fa-file"></i>Download CV
+              <a href="#contact" className="btn">
+                <i className="fa-solid fa-envelope"></i>Get in Touch
               </a>
             </div>
           </div>
           <div className="profile-container">
             <div className="profile-wrapper">
-              <img src="/images/picred2.png" alt="Profile Picture" className="profile-img" />
+              <img src="/images/propic2.png" alt="Profile Picture" className="profile-img" />
               <div className="glow-effect"></div>
             </div>
           </div>

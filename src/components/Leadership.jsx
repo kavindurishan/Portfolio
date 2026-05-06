@@ -52,6 +52,14 @@ const leadershipData = [
 const socialImpactData = [
   {
     icon: 'fa-solid fa-handshake-angle',
+    date: '2026',
+    title: "EUPHORIA '26  ",
+    org: 'Faculty of Computing Student Community | SLIIT',
+    description: "Committee Member | Musical Event | Get to gether | SLIIT  \nContributed to planning and coordination of EUPHORIA '26, a university-level musical event at SLIIT. Actively supported event operations, teamwork, and execution to ensure a smooth and engaging experience for participants and the audience.",
+    tags: ['Event Management', 'Teamwork', 'Leadership Support'],
+  },
+  {
+    icon: 'fa-solid fa-handshake-angle',
     date: '2025',
     title: "Wiramaya'25",
     org: 'Faculty of Computing Student Community | SLIIT',

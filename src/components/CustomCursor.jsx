@@ -38,7 +38,7 @@ function CustomCursor() {
         width: ${6 - i * 0.5}px;
         height: ${6 - i * 0.5}px;
         border-radius: 50%;
-        background: var(--neon-red);
+        background: var(--neon-blue);
         pointer-events: none;
         z-index: 99997;
         opacity: ${0.6 - i * 0.07};
@@ -62,7 +62,7 @@ function CustomCursor() {
         width: 3px;
         height: 3px;
         border-radius: 50%;
-        background: var(--neon-pink);
+        background: var(--neon-cyan);
         pointer-events: none;
         z-index: 99996;
         opacity: 0;
@@ -100,7 +100,7 @@ function CustomCursor() {
       sparkle.el.style.left = `${x}px`
       sparkle.el.style.top = `${y}px`
       sparkle.el.style.opacity = '1'
-      sparkle.el.style.background = Math.random() > 0.5 ? 'var(--neon-red)' : 'var(--neon-pink)'
+      sparkle.el.style.background = Math.random() > 0.5 ? 'var(--neon-blue)' : 'var(--neon-cyan)'
       sparkle.el.style.boxShadow = `0 0 6px currentColor`
       sparkle.el.style.transition = 'none'
 

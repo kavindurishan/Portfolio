@@ -1,7 +1,13 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
+const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';    // e.g. 'service_abc123'
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // e.g. 'template_xyz789'
+const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';     // e.g. 'AbCdEfGhIjKlMn'
 
 function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  const formRef = useRef();
+  const [formData, setFormData] = useState({ from_name: '', from_email: '', subject: '', message: '' });
   const [formMessage, setFormMessage] = useState({ text: '', type: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -16,21 +22,27 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { name, email, subject, message } = formData;
-    if (!name.trim() || !email.trim() || !subject.trim() || !message.trim()) {
+    const { from_name, from_email, subject, message } = formData;
+    if (!from_name.trim() || !from_email.trim() || !subject.trim() || !message.trim()) {
       showMessage('Please fill in all fields.', 'error');
       return;
     }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(from_email)) {
       showMessage('Please enter a valid email address.', 'error');
       return;
     }
     setIsSubmitting(true);
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        EMAILJS_PUBLIC_KEY
+      );
       showMessage("Thank you! Your message has been sent successfully.", 'success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      setFormData({ from_name: '', from_email: '', subject: '', message: '' });
     } catch (error) {
+      console.error('EmailJS Error:', error);
       showMessage('Oops! Something went wrong. Please try again later.', 'error');
     } finally {
       setIsSubmitting(false);
@@ -80,14 +92,14 @@ function Contact() {
             </div>
           </div>
           <div className="contact-form-container">
-            <form id="contactForm" className="contact-form" onSubmit={handleSubmit}>
+            <form id="contactForm" className="contact-form" ref={formRef} onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name"><i className="fa-solid fa-user"></i> Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required value={formData.name} onChange={handleChange} />
+                <input type="text" id="name" name="from_name" placeholder="Enter your name" required value={formData.from_name} onChange={handleChange} />
               </div>
               <div className="form-group">
                 <label htmlFor="email"><i className="fa-solid fa-envelope"></i> Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required value={formData.email} onChange={handleChange} />
+                <input type="email" id="email" name="from_email" placeholder="Enter your email" required value={formData.from_email} onChange={handleChange} />
               </div>
               <div className="form-group">
                 <label htmlFor="subject"><i className="fa-solid fa-tag"></i> Subject</label>
