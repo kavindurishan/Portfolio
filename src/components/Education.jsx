@@ -4,23 +4,20 @@ const educationData = [
     date: 'Present',
     title: 'BSc.(Hons) in Information Technology Specialising in Software Engineering',
     institution: 'Sri Lanka Institute of Information Technology | Malabe, Sri Lanka',
-    description: 'Currently pursuing a Bachelor of Science (Honours) degree in Software Engineering, focusing on modern computing technologies and software development.',
-    tags: ['HTML', 'CSS', 'Java', 'Full Stack', 'Modern Frameworks'],
+    tags: [],
   },
   {
     logo: '/images/icbt.jpg',
     date: '2024 – 2025',
     title: 'International Diploma in Information Technology',
     institution: 'International College of Business & Technology (ICBT), Sri Lanka',
-    description: 'Gained hands-on experience in automobile repair, diagnostics, and maintenance.',
-    tags: ['HTML', 'CSS', 'Python', 'Web Development', 'Graphic Designing'],
+    tags: [],
   },
   {
     logo: '/images/Isipathana-Logo.png',
     date: '2020 – 2023',
     title: 'G.C.E. Advanced Level Examination',
     institution: 'Isipathana College, Colombo 05',
-    description: "Faced A/Ls from Commerce Stream and achieved one 'B' pass and two 'S' passes.",
     tags: [],
   },
   {
@@ -28,7 +25,6 @@ const educationData = [
     date: '2015 – 2020',
     title: 'G.C.E. Ordinary Level Examination',
     institution: 'Isipathana College, Colombo 05',
-    description: "Achieved three 'A' passes, three 'B' passes, two 'C' passes and one 'S' pass.",
     tags: [],
   },
 ];
