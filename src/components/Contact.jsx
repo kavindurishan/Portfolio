@@ -66,7 +66,7 @@ function Contact() {
                 <div className="info-icon"><i className="fa-solid fa-envelope"></i></div>
                 <div className="info-details">
                   <h3>Email</h3>
-                  <a href="mailto:kavindurishan6@gmail.com">kavindurishan6@gmail.com</a>
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kavindurishan6@gmail.com" target="_blank" rel="noopener noreferrer">kavindurishan6@gmail.com</a>
                 </div>
               </div>
               <div className="info-item">
@@ -80,7 +80,7 @@ function Contact() {
                 <div className="info-icon"><i className="fa-solid fa-location-dot"></i></div>
                 <div className="info-details">
                   <h3>Location</h3>
-                  <p>166/5, Stanely Thilakarathna Mawatha, Nugegoda</p>
+                  <a href="https://www.google.com/maps/search/?api=1&query=166/5,+Stanely+Thilakarathna+Mawatha,+Nugegoda" target="_blank" rel="noopener noreferrer">166/5, Stanely Thilakarathna Mawatha, Nugegoda</a>
                 </div>
               </div>
             </div>

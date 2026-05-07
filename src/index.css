@@ -2599,6 +2599,16 @@ footer{
     font-size: 0.95rem;
 }
 
+.footer-contact a {
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-contact a:hover {
+    color: var(--neon-blue);
+}
+
 .footer-contact i {
     color: var(--neon-blue);
 }
