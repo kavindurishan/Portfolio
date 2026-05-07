@@ -27,7 +27,7 @@ function Footer() {
         </div>
         <div className="footer-contact">
           <h4>Contact</h4>
-          <p><i className="fa-solid fa-envelope"></i> <a href="mailto:kavindurishan6@gmail.com">kavindurishan6@gmail.com</a></p>
+          <p><i className="fa-solid fa-envelope"></i> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kavindurishan6@gmail.com" target="_blank" rel="noopener noreferrer">kavindurishan6@gmail.com</a></p>
           <p><i className="fa-solid fa-phone"></i> <a href="tel:+94778277802">+94 77 827 7802</a></p>
           <p><i className="fa-solid fa-location-dot"></i> <a href="https://www.google.com/maps/search/?api=1&query=Nugegoda,+Sri+Lanka" target="_blank" rel="noopener noreferrer">Nugegoda, Sri Lanka</a></p>
         </div>
