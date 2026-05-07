@@ -62,27 +62,27 @@ function Contact() {
             <h2>Let's Connect</h2>
             <p className="info-description">Feel free to reach out through any of these channels. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
             <div className="info-items">
-              <div className="info-item">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kavindurishan6@gmail.com" className="info-item">
                 <div className="info-icon"><i className="fa-solid fa-envelope"></i></div>
                 <div className="info-details">
                   <h3>Email</h3>
-                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kavindurishan6@gmail.com" target="_blank" rel="noopener noreferrer">kavindurishan6@gmail.com</a>
+                  <p>kavindurishan6@gmail.com</p>
                 </div>
-              </div>
-              <div className="info-item">
+              </a>
+              <a href="tel:+94778277802" className="info-item">
                 <div className="info-icon"><i className="fa-solid fa-phone"></i></div>
                 <div className="info-details">
                   <h3>Phone</h3>
-                  <a href="tel:+94778277802">+94 778 277 802</a>
+                  <p>+94 778 277 802</p>
                 </div>
-              </div>
-              <div className="info-item">
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=166/5,+Stanely+Thilakarathna+Mawatha,+Nugegoda" target="_blank" rel="noopener noreferrer" className="info-item">
                 <div className="info-icon"><i className="fa-solid fa-location-dot"></i></div>
                 <div className="info-details">
                   <h3>Location</h3>
-                  <a href="https://www.google.com/maps/search/?api=1&query=166/5,+Stanely+Thilakarathna+Mawatha,+Nugegoda" target="_blank" rel="noopener noreferrer">166/5, Stanely Thilakarathna Mawatha, Nugegoda</a>
+                  <p>166/5, Stanely Thilakarathna Mawatha, Nugegoda</p>
                 </div>
-              </div>
+              </a>
             </div>
             <div className="footer-socials">
               <a href="https://github.com/kavindurishan" aria-label="GitHub"><i className="fa-brands fa-github"></i></a>

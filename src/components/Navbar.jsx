@@ -59,6 +59,15 @@ function Navbar() {
             {item.label}
           </a>
         ))}
+        <a 
+          href="https://github.com/kavindurishan" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="nav-link github-nav-link"
+          title="My GitHub Profile"
+        >
+          <i className="fa-brands fa-github"></i>
+        </a>
       </div>
     </nav>
   );

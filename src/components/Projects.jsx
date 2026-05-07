@@ -152,7 +152,7 @@ function ProjectCard({ project }) {
           }}
         />
         <div className="project-image-overlay">
-          <a href={project.html_url} target="_blank" rel="noopener noreferrer" className="project-image-link">
+          <a href="https://github.com/kavindurishan" target="_blank" rel="noopener noreferrer" className="project-image-link">
             <i className="fa-solid fa-external-link"></i>
           </a>
         </div>
@@ -160,8 +160,10 @@ function ProjectCard({ project }) {
       <div className="project-content">
         <div className="project-header">
           <h3 className="project-title">
-            <i className="fa-brands fa-github"></i>
-            {project.name}
+            <a href="https://github.com/kavindurishan" target="_blank" rel="noopener noreferrer">
+              <i className="fa-brands fa-github"></i>
+              {project.name}
+            </a>
           </h3>
         </div>
         <p className="project-description">{description}</p>
@@ -175,7 +177,7 @@ function ProjectCard({ project }) {
             <i className="fa-solid fa-calendar"></i>
             Updated: {updatedDate}
           </span>
-          <a href={project.html_url} target="_blank" rel="noopener noreferrer" className="project-github-link" title="View on GitHub">
+          <a href="https://github.com/kavindurishan" target="_blank" rel="noopener noreferrer" className="project-github-link" title="View on GitHub">
             <i className="fa-brands fa-github"></i>
           </a>
         </div>
@@ -199,7 +201,8 @@ function Projects() {
 
       const cached = getCachedProjects();
       if (cached) {
-        setAllProjects(cached);
+        const filtered = cached.filter(repo => repo.name.toLowerCase() !== GITHUB_USERNAME.toLowerCase());
+        setAllProjects(filtered);
         setLoading(false);
         setFromCache(true);
         return;
@@ -210,7 +213,8 @@ function Projects() {
         const expiredCache = localStorage.getItem(CACHE_KEY);
         if (expiredCache) {
           const { data } = JSON.parse(expiredCache);
-          setAllProjects(data);
+          const filtered = data.filter(repo => repo.name.toLowerCase() !== GITHUB_USERNAME.toLowerCase());
+          setAllProjects(filtered);
           setLoading(false);
           setFromCache(true);
           return;
@@ -218,7 +222,7 @@ function Projects() {
         throw new Error('Failed to fetch repositories');
       }
 
-      const repos = await response.json();
+      const repos = (await response.json()).filter(repo => repo.name.toLowerCase() !== GITHUB_USERNAME.toLowerCase());
       setLoadingText('Loading project details...');
 
       const enrichedProjects = await Promise.all(

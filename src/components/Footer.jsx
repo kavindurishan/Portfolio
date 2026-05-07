@@ -33,7 +33,7 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2025 Kavindu Rishan · Built with <span>❤</span> &amp; Passion</p>
+        <p>&copy; 2025 Kavindu Rishan Modarage · Built with <span>❤</span> &amp; Passion</p>
       </div>
     </footer>
   );
