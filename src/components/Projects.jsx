@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 
 const GITHUB_USERNAME = 'kavindurishan';
 const GITHUB_API_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`;
-const CACHE_KEY = 'github_projects_cache';
+const CACHE_KEY = 'github_projects_cache_v2';
 const CACHE_TTL = 60 * 60 * 1000; // 1 hour in milliseconds
 const MAX_README_FETCHES = 10; // Limit README fetches to conserve API calls
 
@@ -92,6 +92,8 @@ const PROJECT_IMAGE_MAPPING = {
   'Portfolio': '/images/projects/portfolio_hero.png',
   'C.E.I.D.': '/images/projects/Picture1.png',
   'Movie-Ticket-Booking-System': '/images/projects/movie.png',
+  // 'Paw-Rescue': '/images/projects/paw_rescue_hero.png',
+  'SpotOn-Vehicle-Management': '/images/projects/SPOTON.png',  
 };
 
 // Descriptions
@@ -99,6 +101,8 @@ const PROJECT_DESCRIPTION_MAPPING = {
   'Portfolio': 'A premium, modern portfolio website built with React and Vite, featuring advanced animations, deep space aesthetics, and dynamic GitHub integration.',
   'Movie-Ticket-Booking-System': 'A comprehensive full-stack movie ticket booking platform with real-time seat selection, payment integration, and a sleek user dashboard.',
   'C.E.I.D.': 'A specialized platform developed for educational and institutional management, focusing on streamlined data handling and user-friendly interfaces.',
+  'Paw-Rescue': 'A pet adoption platform built to connect rescue animals with loving homes, featuring a user-friendly interface and comprehensive management tools.',
+  'SpotOn-Vehicle-Management': 'A robust Spring Boot backend application for comprehensive vehicle management, tracking, and administrative controls.'
 };
 
 // Technology Lists
@@ -106,6 +110,8 @@ const PROJECT_LANGUAGES_MAPPING = {
   'Portfolio': ['React', 'Vite', 'CSS3', 'JavaScript', 'GitHub API'],
   'Movie-Ticket-Booking-System': ['HTML5', 'CSS3', 'JavaScript'],
   'C.E.I.D.': ['HTML5', 'CSS3', 'JavaScript'],
+  'Paw-Rescue': ['React-Native', 'Node.js', 'JavaScript', 'HTML5', 'CSS3'],
+  'SpotOn-Vehicle-Management': ['Java', 'Spring Boot', 'MySQL']
 };
 
 async function fetchLanguages(languagesUrl) {
