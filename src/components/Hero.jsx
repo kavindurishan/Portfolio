@@ -43,7 +43,7 @@ function Hero() {
           </div>
           <div className="profile-container">
             <div className="profile-wrapper">
-              <img src="/images/propic2.png" alt="Profile Picture" className="profile-img" />
+              <img src="/images/KRM.png" alt="Profile Picture" className="profile-img" />
               <div className="glow-effect"></div>
             </div>
           </div>
