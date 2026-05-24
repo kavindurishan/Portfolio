@@ -92,7 +92,7 @@ const PROJECT_IMAGE_MAPPING = {
   'Portfolio': '/images/projects/portfolio_hero.png',
   'C.E.I.D.': '/images/projects/Picture1.png',
   'Movie-Ticket-Booking-System': '/images/projects/movie.png',
-  // 'Paw-Rescue': '/images/projects/paw_rescue_hero.png',
+  'Paw-Rescue': '/images/projects/PawRescue.png',
   'SpotOn-Vehicle-Management': '/images/projects/SPOTON.png',  
 };
 
