@@ -110,7 +110,7 @@ const PROJECT_LANGUAGES_MAPPING = {
   'Portfolio': ['React', 'Vite', 'CSS3', 'JavaScript', 'GitHub API'],
   'Movie-Ticket-Booking-System': ['HTML5', 'CSS3', 'JavaScript'],
   'C.E.I.D.': ['HTML5', 'CSS3', 'JavaScript'],
-  'Paw-Rescue': ['React-Native', 'Node.js', 'JavaScript', 'HTML5', 'CSS3'],
+  'Paw-Rescue': ['React-Native', 'Node.js', 'JavaScript', 'HTML5', 'CSS3', 'MongoDB'],
   'SpotOn-Vehicle-Management': ['Java', 'Spring Boot', 'MySQL']
 };
 
